@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-    app.send('<h1>404 Page not found</h1>')
+    app.status(404).send('<h1>404 Page not found</h1>')
 })
 
 app.listen(process.env.PORT)
